@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>domanda 1</h1>
+        <p>select * 
+            from students as s
+            where YEAR(s.date_of_birth) = '1990';
+        </p>
+        <h1>domanda 2</h1>
+        <p>
+            select *
+            from courses as c
+            where c.cfu >= '10';
+        </p>
+        <H3>domanda 3</H3>
+        <p>
+            select *
+            from students s
+            where DATEDIFF(CURDATE() , s.date_of_birth)/'364.3' >= '30';
+        </p>
+        <h1>domanda 4</h1>
+        <p>
+            select *
+            from courses c 
+            WHERE c.year = 1 
+            AND c.degree_id = 1 
+        </p>
+        <h1>domanda 5</h1>
+        <p>
+            SELECT * 
+            FROM exams e 
+            WHERE e.exams.date = '2021-06-20' 
+            AND e.exams.time > '14:00:00';
+        </p>
+        <h1>domanda 6</h1>
+        <p>
+            SELECT * 
+            FROM degrees 
+            WHERE level = 'Magistrale';
+        </p>
+        <h1>domanda 7</h1>
+        <p>
+            SELECT COUNT(*) AS total_dipartimenti 
+            FROM departments;
+        </p>
+        <h1>domanda 8</h1>
+        <p>
+            select *
+            from teachers t 
+            where t.phone is null
+        </p>
+    </body>
+</html>

@@ -4,55 +4,71 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1, h3 {
+                color: #333;
+            }
+            p {
+                background-color: #f4f4f4;
+                padding: 10px;
+                border-left: 5px solid #ccc;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
     </head>
     <body>
         <h1>domanda 1</h1>
-        <p>select * 
-            from students as s
+        <p> 
+            select * <br>
+            from students as s <br>
             where YEAR(s.date_of_birth) = '1990';
         </p>
         <h1>domanda 2</h1>
         <p>
-            select *
-            from courses as c
+            select * <br>
+            from courses as c <br>
             where c.cfu >= '10';
         </p>
-        <H3>domanda 3</H3>
+        <h1>domanda 3</h1>
         <p>
-            select *
-            from students s
+            select * <br>
+            from students s <br>
             where DATEDIFF(CURDATE() , s.date_of_birth)/'364.3' >= '30';
         </p>
         <h1>domanda 4</h1>
         <p>
-            select *
-            from courses c 
-            WHERE c.year = 1 
-            AND c.degree_id = 1 
+            select * <br>
+            from courses c <br>
+            WHERE c.year = 1 <br>
+            AND c.degree_id = 1;
         </p>
         <h1>domanda 5</h1>
         <p>
-            SELECT * 
-            FROM exams e 
-            WHERE e.exams.date = '2021-06-20' 
+            SELECT * <br>
+            FROM exams e <br>
+            WHERE e.exams.date = '2021-06-20' <br>
             AND e.exams.time > '14:00:00';
         </p>
         <h1>domanda 6</h1>
         <p>
-            SELECT * 
-            FROM degrees 
+            SELECT * <br>
+            FROM degrees <br>
             WHERE level = 'Magistrale';
         </p>
         <h1>domanda 7</h1>
         <p>
-            SELECT COUNT(*) AS total_dipartimenti 
+            SELECT COUNT(*) AS total_dipartimenti <br>
             FROM departments;
         </p>
         <h1>domanda 8</h1>
         <p>
-            select *
-            from teachers t 
-            where t.phone is null
+            select * <br>
+            from teachers t <br>
+            where t.phone is null;
         </p>
     </body>
 </html>

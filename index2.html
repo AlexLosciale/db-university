@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1, h3 {
+                color: #333;
+            }
+            p {
+                background-color: #f4f4f4;
+                padding: 10px;
+                border-left: 5px solid #ccc;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>1</h1>
+        <p>SELECT s.*<br>
+            FROM students s<br>
+            JOIN degrees d ON s.degree_id = d.id</p>
+        <h1>2</h1>
+        <p>SELECT d.*<br>
+            FROM degrees d<br>
+            JOIN departments dept ON d.department_id = dept.id<br>
+            WHERE d.level = 'Magistrale'</p>
+        <h1>3</h1>
+        <p>SELECT c.*<br>
+            FROM courses c<br>
+            JOIN course_teacher ct ON c.id = ct.course_id<br>
+            WHERE ct.teacher_id = 44;</p>
+        <h1>4</h1>
+        <p>SELECT s.id, s.name, s.surname, d.name AS degree, dept.name AS department<br>
+            FROM students s<br>
+            JOIN degrees d ON s.degree_id = d.id<br>
+            JOIN departments dept ON d.department_id = dept.id<br>
+            ORDER BY s.surname, s.name;</p>
+        <h1>5</h1>
+        <p>SELECT d.name AS degree, c.name AS course, t.surname<br>
+            FROM degrees d<br>
+            JOIN courses c ON d.id = c.degree_id<br>
+            JOIN course_teacher ct ON c.id = ct.course_id<br>
+            JOIN teachers t ON ct.teacher_id = t.id;</p>
+        <h1>6</h1>
+        <p>SELECT DISTINCT t.*<br>
+            FROM teachers t<br>
+            JOIN course_teacher ct ON t.id = ct.teacher_id<br>
+            JOIN courses c ON ct.course_id = c.id<br>
+            JOIN degrees d ON c.degree_id = d.id</p>
+        <h1>7</h1>
+        <p></p>
+    </body>
+</html>
